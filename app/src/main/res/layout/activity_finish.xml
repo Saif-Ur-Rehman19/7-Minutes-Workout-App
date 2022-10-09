@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarFinish"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/white"
+        app:titleTextColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/endTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarFinish"
+        android:layout_marginTop="100dp"
+        android:text="END"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:padding="3dp"/>
+
+    <FrameLayout
+        android:id="@+id/flFinish"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_circular_color_accent_border_finish"
+        app:layout_constraintTop_toBottomOf="@+id/endTextview">
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_baseline_done_24"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/congratsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flFinish"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:text="       Congratulations!\nYou have done the workout"/>
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/congratsTextView"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:text="Finish"
+        android:textSize="20sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
